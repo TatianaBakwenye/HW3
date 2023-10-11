@@ -31,7 +31,7 @@ date_list = [
     date(2020, 4, 5),
 ]
 def get_day_month_year(y):
-    data = pd.DataFrame(map(lambda z: [z.year, z.month, z.day]  , y ))
+    data = pd.DataFrame(map(lambda z: [z.day, z.month, z.year]  , y ))
     return data
 
 get_day_month_year(date_list)
