@@ -27,6 +27,3 @@ def model(c, d):
     print("Train ROC AUC:", train_roc_auc)
     print("Test ROC AUC:", test_roc_auc)
     return c, d
-   
-
-modeloTra, modeloTes = model(imputed_df, dft1)
