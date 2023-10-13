@@ -1,3 +1,4 @@
+#%%
 import pandas as pd
 import numpy as np
 
@@ -19,7 +20,8 @@ def clean_na(df, columns_drop, columns_fill):
     return df_clean
 
 #%%
-def process_data(df, columns_drop, columns_fill, columns_hot, columns_binary):
+# Function to encode data (create dummies and binary variable)
+def encode_data(df, columns_drop, columns_fill, columns_hot, columns_binary):
     df_clean['Binary'] = df_clean[columns_binary].apply(lambda x: 1 if x == 'M' else 0)
     dummy = pd.get_dummies(df_clean[columns_hot])
     encoded_df = pd.concat([df_clean, dummy], axis=1)
@@ -48,3 +50,5 @@ def one_hot(df, columns):
 def binary(df, columns):
     df['Binary'] = df[columns].apply(lambda x: 1 if x == 'M' else 0)
     return df
+
+# %%
