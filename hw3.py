@@ -58,5 +58,21 @@ get_day_month_year(date_list)
 # for instance for list_1=[[2], 3, [[1,2],5]] 
 # the result should be 13
 #
+#%%
+def sum_general_int_list(lst):
+    total = 0
+    for item in lst:
+        if isinstance(item, int):
+            total += item
+        elif isinstance(item, list):
+            total += sum_general_int_list(item)
+
+    return total
+#%%
+print(sum_general_int_list([[2], 3, [[1,2],5]]))
 
 
+
+
+
+# %%
