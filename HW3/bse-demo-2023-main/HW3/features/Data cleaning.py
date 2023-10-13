@@ -1,11 +1,5 @@
 import pandas as pd
 import numpy as np
-import os
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import OneHotEncoder
-from sklearn.metrics import roc_auc_score
 
 #%%
 # Single function for cleaning and encoding
