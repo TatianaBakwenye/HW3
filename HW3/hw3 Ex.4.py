@@ -47,6 +47,16 @@ get_day_month_year(date_list)
 # HINT: You can use geopy.distance in order to compute the distance
 #
 
+from geopy.distance import geodesic as GD
+
+example_input = [((41.23,23.5), (41.5, 23.4)), ((52.38, 20.1),(52.3, 17.8))]
+
+def compute_distance(tuples):
+    distances = list(map(lambda pair: GD(pair[0], pair[1]).kilometers, tuples))
+    return distances
+
+print(compute_distance(example_input))
+#%%
 #################################################
 # 4)
 # Consider a list that each element can be an integer or
