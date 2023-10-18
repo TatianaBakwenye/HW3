@@ -3,7 +3,7 @@ try:
 except ImportError:
     from distutils.core import setup
 
-import HW3
+import HW3_library
 
 
 def get_requirements(requirements_path='requirements.txt'):
@@ -12,14 +12,14 @@ def get_requirements(requirements_path='requirements.txt'):
 
 
 setup(
-    name='HW3',
-    version=HW3.__version__,
-    description='Example library',
+    name='HW3_library',
+    version=HW3_library.__version__,
+    description='HW3_library',
     author='Arianna_Vanessa_Tatiana',
     packages=find_packages(where='', exclude=['tests']),
     install_requires=get_requirements(),
     setup_requires=['pytest-runner', 'wheel'],
-    url='https://github.com/icedgarr/bse-demo-2023',
+    url='https://github.com/TatianaBakwenye/HW3.git',
     classifiers=[
         'Programming Language :: Python :: 3.10.7'
     ]
